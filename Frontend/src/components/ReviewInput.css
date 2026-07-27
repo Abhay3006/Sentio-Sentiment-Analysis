@@ -1,0 +1,57 @@
+.review-input-wrap {
+  position: relative;
+}
+
+.review-input {
+  width: 100%;
+  min-height: 180px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.review-input::placeholder {
+  color: var(--muted-2);
+}
+
+.review-input:hover {
+  border-color: var(--border-strong);
+}
+
+.review-input:focus {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+  background: var(--surface-2);
+}
+
+.review-input-meta {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-size: 12px;
+  color: var(--muted-2);
+  pointer-events: none;
+}
+
+/* ========================================================== */
+
+@media (max-width:480px){
+
+  .review-input{
+
+    min-height:150px;
+    padding:16px;
+    font-size:14px;
+
+  }
+
+}
