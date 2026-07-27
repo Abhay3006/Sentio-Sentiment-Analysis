@@ -20,7 +20,7 @@ function CSVUpload({ setCsvLoading }) {
 
     try {
         const response = await fetch(
-            `http://127.0.0.1:8000/progress/${id}`
+            `https://sentio-backend-pdl4.onrender.com/progress/${id}`
         );
 
         if (!response.ok) {
@@ -117,7 +117,7 @@ function CSVUpload({ setCsvLoading }) {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/predict-csv",
+        "https://sentio-backend-pdl4.onrender.com/predict-csv",
         {
           method: "POST",
           body: formData,
@@ -178,7 +178,7 @@ function CSVUpload({ setCsvLoading }) {
     try {
 
         await fetch(
-            `http://127.0.0.1:8000/cancel/${jobId}`,
+            `https://sentio-backend-pdl4.onrender.com/cancel/${jobId}`,
             {
                 method: "POST"
             }
@@ -211,7 +211,7 @@ function CSVUpload({ setCsvLoading }) {
   function downloadCSV() {
 
     window.open(
-      `http://127.0.0.1:8000/download/${jobId}`,
+      `https://sentio-backend-pdl4.onrender.com/download/${jobId}`,
       "_blank"
     );
 

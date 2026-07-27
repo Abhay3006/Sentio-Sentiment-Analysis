@@ -34,7 +34,7 @@ function App() {
     try {
 
         const response = await fetch(
-          "http://127.0.0.1:8000/predict",
+          "https://sentio-backend-pdl4.onrender.com/predict",
           {
             method: "POST",
             headers: {
@@ -64,11 +64,11 @@ function App() {
             negative_probability: 0
         });
 
-        if (err.message === "Failed to fetch") {
+        if (error.message === "Failed to fetch") {
           setError("Unable to connect to the server.");
         }
         else {
-          setError(err.message);
+          setError(error.message);
         }
 
     }
