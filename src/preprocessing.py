@@ -13,7 +13,6 @@ nltk.download("stopwords", quiet=True)
 nltk.download("wordnet", quiet=True)
 nltk.download("averaged_perceptron_tagger", quiet=True)
 nltk.download("omw-1.4", quiet=True)
-nltk.download("punkt", quiet=True)
 
 # Creates a set of stopwords excluding 'not', 'no', 'nor'
 stop_words = set(stopwords.words("english"))
