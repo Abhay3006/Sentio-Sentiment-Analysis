@@ -9,11 +9,11 @@ from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 from nltk.corpus import wordnet
 
-'''nltk.download("stopwords")
-nltk.download("wordnet")
-nltk.download("averaged_perceptron_tagger")
-nltk.download("omw-1.4")
-nltk.download("punkt")'''
+nltk.download("stopwords", quiet=True)
+nltk.download("wordnet", quiet=True)
+nltk.download("averaged_perceptron_tagger", quiet=True)
+nltk.download("omw-1.4", quiet=True)
+nltk.download("punkt", quiet=True)
 
 # Creates a set of stopwords excluding 'not', 'no', 'nor'
 stop_words = set(stopwords.words("english"))
