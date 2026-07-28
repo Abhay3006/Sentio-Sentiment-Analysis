@@ -86,11 +86,10 @@ def predict(request: ReviewRequest):
             detail="Model files not found."
         )
 
-    except Exception:
-        raise HTTPException(
-            status_code=500,
-            detail="Prediction failed."
-        )
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
 
 def process_csv(job_id: str, file_bytes: bytes):
 
