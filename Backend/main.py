@@ -31,6 +31,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "https://sentio-sentiment-analysis.vercel.app",
+        "https://sentio-sentiment-analysis-5j2ol9mz5-abhayrajsingh-bopche.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
