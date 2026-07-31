@@ -3,6 +3,7 @@ import uuid
 import pandas as pd
 import traceback
 import io
+import time
 
 from fastapi import FastAPI, HTTPException, UploadFile, File, BackgroundTasks
 from fastapi.responses import FileResponse
@@ -71,7 +72,10 @@ def get_progress(job_id: str):
 def predict(request: ReviewRequest):
 
     try:
+        start = time.perf_counter()
         result = predict_sentiment(request.review)
+        end = time.perf_counter()
+        print(f"Inference Time: {(end - start) * 1000:.2f} ms")
         return result
 
     except ValueError as e:
